@@ -5,5 +5,8 @@
   "homepage": "https://rssrndar-crypto.github.io/portfolio/",
   "scripts": {
     "deploy": "gh-pages -d ."
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }

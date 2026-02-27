@@ -1,252 +1,157 @@
-/* ===== USA Modern 2026 Portfolio – Navy Professional Theme ===== */
+/* ===== 2026 PREMIUM PORTFOLIO ===== */
 
 :root{
-  /* Background */
   --bg-gradient: linear-gradient(135deg, #0a192f, #112240, #1c2b4a);
-
-  /* Glass Card */
-  --card-bg: rgba(255, 255, 255, 0.05);
-  --glass: blur(18px);
-
-  /* Text */
-  --text: #f1f5f9;
-  --muted: #94a3b8;
-
-  /* USA Accent Colors */
-  --accent: #3b82f6;      /* Professional Blue */
-  --accent2: #ef4444;     /* Subtle Red */
-
-  --maxw: 1150px;
+  --card-bg: rgba(255,255,255,0.05);
+  --text:#f1f5f9;
+  --muted:#94a3b8;
+  --accent:#3b82f6;
+  --accent2:#ef4444;
+  --maxw:1100px;
 }
 
-/* ===== Body ===== */
+*{margin:0;padding:0;box-sizing:border-box;}
+
 body{
-  font-family: 'Inter', system-ui, sans-serif;
-  background: var(--bg-gradient);
-  background-size: 300% 300%;
-  animation: gradientMove 15s ease infinite;
-  color: var(--text);
+  font-family:'Inter',sans-serif;
+  background:var(--bg-gradient);
+  background-size:300% 300%;
+  animation:gradientMove 12s ease infinite;
+  color:var(--text);
   display:flex;
   justify-content:center;
   padding:40px 20px;
-  min-height:100vh;
-  position:relative;
-  overflow-x:hidden;
 }
 
-/* Animated Background Glow */
-body::before,
-body::after{
-  content:"";
-  position:absolute;
-  width:450px;
-  height:450px;
-  border-radius:50%;
-  filter: blur(120px);
-  opacity:0.35;
-  z-index:-1;
-}
+.container{max-width:var(--maxw);width:100%;}
 
-body::before{
-  background:#3b82f6;
-  top:-150px;
-  left:-150px;
-}
-
-body::after{
-  background:#ef4444;
-  bottom:-150px;
-  right:-150px;
-}
-
-/* ===== Container ===== */
-.container{
-  width:100%;
-  max-width:var(--maxw);
-}
-
-/* ===== Header ===== */
 header{
   display:flex;
   justify-content:space-between;
   align-items:center;
   margin-bottom:60px;
-  padding:16px 24px;
-  border-radius:16px;
-  background:rgba(255,255,255,0.04);
-  backdrop-filter:blur(12px);
-  border:1px solid rgba(255,255,255,0.08);
 }
 
 .branding h1{
-  font-size:36px;
+  font-size:30px;
   font-weight:800;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-/* ===== Navigation ===== */
+.muted{color:var(--muted);}
+
 .main-nav a{
-  margin-left:28px;
+  margin-left:20px;
   text-decoration:none;
   color:var(--text);
   font-weight:600;
-  position:relative;
-  transition:0.3s ease;
+  transition:.3s;
 }
 
-.main-nav a::after{
-  content:"";
-  position:absolute;
-  width:0%;
-  height:2px;
-  left:0;
-  bottom:-6px;
-  background:linear-gradient(90deg,var(--accent),var(--accent2));
-  transition:0.3s ease;
-}
+.main-nav a:hover{color:var(--accent);}
 
-.main-nav a:hover{
-  color:var(--accent);
-}
-
-.main-nav a:hover::after{
-  width:100%;
-}
-
-.main-nav a.active{
-  color:var(--accent);
-}
-
-/* ===== Hero Section ===== */
 .hero{
+  text-align:center;
   margin-bottom:80px;
 }
 
 .hero h2{
-  font-size:48px;
+  font-size:42px;
   margin-bottom:20px;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
-.hero p{
-  max-width:600px;
+.typing{
   color:var(--muted);
-  line-height:1.6;
+  min-height:28px;
   margin-bottom:30px;
 }
 
-/* ===== Buttons ===== */
 .button{
   display:inline-block;
-  padding:14px 26px;
+  padding:14px 28px;
   border-radius:12px;
   background:linear-gradient(90deg,var(--accent),var(--accent2));
   color:#fff;
   font-weight:700;
   text-decoration:none;
-  transition:0.3s ease;
-  box-shadow:0 8px 25px rgba(59,130,246,0.3);
+  transition:.3s;
 }
 
 .button:hover{
-  transform:translateY(-4px) scale(1.05);
-  box-shadow:0 12px 35px rgba(239,68,68,0.4);
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(0,0,0,.4);
 }
 
-/* ===== Cards ===== */
 .card{
-  background: var(--card-bg);
-  backdrop-filter: var(--glass);
-  border-radius:18px;
+  background:var(--card-bg);
   padding:30px;
-  border:1px solid rgba(255,255,255,0.08);
-  transition:0.4s ease;
-  margin-bottom:30px;
+  border-radius:18px;
+  margin-bottom:50px;
+  backdrop-filter:blur(15px);
+  transition:.4s;
 }
 
 .card:hover{
-  transform: translateY(-8px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+  transform:translateY(-8px);
 }
 
-/* ===== Section Heading ===== */
-h2.section-title{
-  font-size:28px;
+.section-title{
+  font-size:26px;
   margin-bottom:20px;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-/* ===== Skills Grid ===== */
+.dashboard-stats{
+  display:flex;
+  justify-content:space-around;
+  margin-top:20px;
+}
+
+.stat{
+  font-size:26px;
+  font-weight:800;
+}
+
+.project-block{
+  margin-bottom:30px;
+}
+
+.project-meta{
+  color:var(--accent);
+  font-size:14px;
+  margin-bottom:6px;
+}
+
 .skills-grid{
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap:24px;
-  margin-top:25px;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:20px;
 }
 
 .skill{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  padding:22px;
+  text-align:center;
+  padding:20px;
   border-radius:14px;
   background:rgba(255,255,255,0.04);
-  transition:0.3s ease;
-  border:1px solid rgba(255,255,255,0.08);
-}
-
-.skill i{
-  font-size:36px;
-  margin-bottom:12px;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.skill span{
-  font-weight:600;
+  transition:.3s;
 }
 
 .skill:hover{
   transform:translateY(-6px);
-  box-shadow:0 20px 40px rgba(0,0,0,0.35);
 }
 
-/* ===== Footer ===== */
 footer{
-  margin-top:70px;
   text-align:center;
+  margin-top:50px;
   color:var(--muted);
-  font-size:14px;
-  padding-top:25px;
-  border-top:1px solid rgba(255,255,255,0.1);
 }
 
-/* ===== Animations ===== */
 @keyframes gradientMove{
   0%{background-position:0% 50%;}
   50%{background-position:100% 50%;}
   100%{background-position:0% 50%;}
 }
-
-/* ===== Responsive ===== */
-@media(max-width:768px){
-  .hero h2{
-    font-size:36px;
-  }
-
-  header{
-    flex-direction:column;
-    gap:15px;
-  }
-
-  .main-nav a{
-    margin-left:18px;
-  }
-}   
